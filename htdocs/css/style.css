@@ -186,7 +186,7 @@ section{
 }
 
 .home{
-   background:url('../images/home-bg.jpg') no-repeat;
+   background:url('../images/bg.jpg') no-repeat;
    background-size: cover;
    background-position: center;
 }
@@ -1272,11 +1272,17 @@ section{
    color: var(--main-color);
    text-decoration: underline;
 }
-
+/* Footer styling */
 .footer {
    background-color: var(--black);
    padding: 4rem 2rem;
    color: var(--white);
+   width: 100%;
+   position: relative; /* Ensures footer stays at the bottom of content */
+   bottom: 0;
+   left: 0;
+   right: 0;
+   box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow */
 }
 
 .footer .flex {
@@ -1386,14 +1392,11 @@ section{
    }
 }
 
-/* media queries  */
-
+/* Media queries for font-size adjustment */
 @media (max-width:991px){
-
-   html{
+   html {
       font-size: 55%;
    }
-
 }
 
 @media (max-width:768px){

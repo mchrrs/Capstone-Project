@@ -39,7 +39,7 @@ if (isset($_POST['start_conversation'])) {
         'admin_id' => $admin_id,
         'user_id' => $user_id
     ]);
-    
+
     // Redirect to the conversation page
     header("Location: view_conversation_users.php?conversation_id=$conversation_id");
     exit;
@@ -90,7 +90,9 @@ if (isset($_POST['start_conversation'])) {
             <?php endif; ?>
         </div>
 
-        
+        <br><br><br><br><br><br><br><br><br>
+
+        <?php include 'components/footer.php'; ?>
     </section>
 </body>
 

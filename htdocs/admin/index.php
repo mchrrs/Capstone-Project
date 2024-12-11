@@ -177,118 +177,6 @@ if(isset($_POST['submit'])){
             border-radius: 50%;
          }
       }
-
-      /* Form Container Styling */
-      .form-container {
-         background: #fff;
-         border-radius: 10px;
-         padding: 30px;
-         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-         width: 100%;
-         max-width: 400px;
-         text-align: center;
-         box-sizing: border-box;
-         position: relative;
-         z-index: 1;
-         /* Ensures form stays on top of the background */
-      }
-
-      .form-container h3 {
-         font-size: 24px;
-         margin-bottom: 20px;
-         color: #2980b9;
-         font-weight: 700;
-      }
-
-      .form-container h1 {
-         font-size: 27px;
-         margin-bottom: 20px;
-         font-weight: 700;
-      }
-
-      /* Input Fields Styling */
-      .form-container .box {
-         width: 100%;
-         padding: 10px 15px;
-         margin: 10px 0;
-         border: 1px solid #ccc;
-         border-radius: 5px;
-         font-size: 16px;
-         color: #333;
-      }
-
-      .form-container .box:focus {
-         border-color: #2980b9;
-         outline: none;
-         box-shadow: 0 0 5px rgba(41, 128, 185, 0.5);
-      }
-
-      /* Login Button Styling */
-      .form-container .btn {
-         width: 100%;
-         padding: 10px 15px;
-         margin: 20px 0;
-         border: none;
-         background: #2980b9;
-         color: #fff;
-         font-size: 18px;
-         border-radius: 5px;
-         cursor: pointer;
-         transition: background 0.3s ease;
-      }
-
-      .form-container .btn:hover {
-         background: #1f639a;
-      }
-
-      /* Footer Link Styling */
-      .form-container .form-footer {
-         margin-top: 10px;
-         font-size: 14px;
-         color: #555;
-      }
-
-      .form-container .form-footer a {
-         color: #2980b9;
-         text-decoration: none;
-      }
-
-      .form-container .form-footer a:hover {
-         text-decoration: underline;
-      }
-
-      /* Responsive Adjustments */
-      @media (max-width: 768px) {
-         body {
-            padding: 10px;
-         }
-
-         .form-container {
-            padding: 20px;
-         }
-
-         .form-container h3 {
-            font-size: 20px;
-         }
-
-         .form-container .box {
-            font-size: 14px;
-         }
-
-         .form-container .btn {
-            font-size: 16px;
-         }
-      }
-
-      @media (max-width: 480px) {
-         .form-container h3 {
-            font-size: 18px;
-         }
-
-         .form-container .btn {
-            padding: 8px 10px;
-         }
-      }
    </style>
 
 </head>
@@ -312,7 +200,7 @@ if(isset($_POST['submit'])){
    </div>
 
    <!-- Login Form -->
-   <section class="form-container">
+   <section class="admin-login-container">
       <form action="" method="POST">
          <h1>Pagkalinawan AMS</h1>
          <br>

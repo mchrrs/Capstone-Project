@@ -95,11 +95,10 @@ CREATE TABLE `bills` (
     `id` INT AUTO_INCREMENT PRIMARY KEY,
     `user_id` VARCHAR(20) NOT NULL,             -- Link bill to a specific user
     `property_id` VARCHAR(20) NOT NULL,         -- Link bill to a specific property
-    `house_rent` DECIMAL(10, 2) NOT NULL,       -- House rent bill
-    `water_bill` DECIMAL(10, 2) NOT NULL,       -- Water bill
-    `electricity_bill` DECIMAL(10, 2) NOT NULL, -- Electricity bill
+    `bill_type` ENUM('house_rent', 'water_bill', 'electricity_bill') NOT NULL, -- Type of bill
+    `amount` DECIMAL(10, 2) NOT NULL,           -- Amount for the selected bill type
     `total` DECIMAL(10, 2) GENERATED ALWAYS AS 
-        (`house_rent` + `water_bill` + `electricity_bill`) STORED, -- Total (calculated)
+        (`amount`) STORED,                     -- Total is just the amount now
     `due_date` DATETIME NOT NULL,               -- Due date for payment
     `status` ENUM('pending', 'paid', 'overdue') NOT NULL DEFAULT 'pending', -- Bill status
     `created_at` DATETIME DEFAULT CURRENT_TIMESTAMP,

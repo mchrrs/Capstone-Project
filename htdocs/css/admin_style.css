@@ -216,6 +216,119 @@ section{
    display: none;
 }
 
+      /* Form Container Styling */
+      .admin-login-container {
+         background: #fff;
+         border-radius: 10px;
+         padding: 30px;
+         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+         width: 100%;
+         max-width: 400px;
+         text-align: center;
+         box-sizing: border-box;
+         position: relative;
+         z-index: 1;
+         /* Ensures form stays on top of the background */
+      }
+
+      .admin-login-container h3 {
+         font-size: 24px;
+         margin-bottom: 20px;
+         color: #2980b9;
+         font-weight: 700;
+      }
+
+      .admin-login-container h1 {
+         font-size: 27px;
+         margin-bottom: 20px;
+         font-weight: 700;
+      }
+
+      /* Input Fields Styling */
+      .admin-login-container .box {
+         width: 100%;
+         padding: 10px 15px;
+         margin: 10px 0;
+         border: 1px solid #ccc;
+         border-radius: 5px;
+         font-size: 16px;
+         color: #333;
+      }
+
+      .admin-login-container .box:focus {
+         border-color: #2980b9;
+         outline: none;
+         box-shadow: 0 0 5px rgba(41, 128, 185, 0.5);
+      }
+
+      /* Login Button Styling */
+      .admin-login-container .btn {
+         width: 100%;
+         padding: 10px 15px;
+         margin: 20px 0;
+         border: none;
+         background: #2980b9;
+         color: #fff;
+         font-size: 18px;
+         border-radius: 5px;
+         cursor: pointer;
+         transition: background 0.3s ease;
+      }
+
+      .admin-login-container .btn:hover {
+         background: #1f639a;
+      }
+
+      /* Footer Link Styling */
+      .admin-login-container .form-footer {
+         margin-top: 10px;
+         font-size: 14px;
+         color: #555;
+      }
+
+      .admin-login-container .form-footer a {
+         color: #2980b9;
+         text-decoration: none;
+      }
+
+      .admin-login-container .form-footer a:hover {
+         text-decoration: underline;
+      }
+
+      /* Responsive Adjustments */
+      @media (max-width: 768px) {
+         body {
+            padding: 10px;
+         }
+
+         .admin-login-container {
+            padding: 20px;
+         }
+
+         .admin-login-container h3 {
+            font-size: 20px;
+         }
+
+         .admin-login-container .box {
+            font-size: 14px;
+         }
+
+         .admin-login-container .btn {
+            font-size: 16px;
+         }
+      }
+
+      @media (max-width: 480px) {
+         .admin-login-container h3 {
+            font-size: 18px;
+         }
+
+         .admin-login-container .btn {
+            padding: 8px 10px;
+         }
+      }
+
+
 .dashboard .box-container{
    display: grid;
    grid-template-columns: repeat(auto-fit, 35rem);
@@ -418,6 +531,56 @@ section{
 .users-table .delete-btn:hover {
    background-color: #cc0000;
 }
+
+/*Post Property Styling */
+
+.form-container{
+   height: 100vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.form-container form{
+   width: 50rem;
+   border-radius: .5rem;
+   padding: 2rem;
+   border: var(--border);
+   text-align: center;
+   background-color: var(--white);
+   box-shadow: var(--box-shadow);
+}
+
+.form-container form h3{
+   padding-bottom: 1rem;
+   font-size: 2.5rem;
+   color: var(--black);
+   text-transform: capitalize;
+}
+
+.form-container form p{
+   padding-top: .7rem;
+   padding-bottom: 1.2rem;
+   font-size:1.8rem;
+   color: var(--light-color);
+}
+
+.form-container form p span{
+   color: var(--red);
+}
+
+.form-container form .box{
+   width: 100%;
+   border-radius: .5rem;
+   padding: 1.4rem;
+   font-size: 1.8rem;
+   color: var(--black);
+   border: var(--border);
+   margin: 1rem 0;
+}
+
+
+
 
 
 /* Section Styling */
@@ -1172,32 +1335,89 @@ section{
    box-shadow: 0 0 5px rgba(220, 53, 69, 0.5);
 }
 
-/* General table styling */
+/* Table Section */
+.table {
+   width: 100%;
+   max-width: 1300px;
+   margin-top: 30px;
+   padding: 25px;
+   background-color: #ffffff;
+   border-radius: 8px;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+   display: flex;
+   flex-direction: column;
+   gap: 30px;
+}
+
+/* Filter Form Styling */
+.filter-form {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 20px;
+   justify-content: flex-start;
+   align-items: center;
+   margin-bottom: 30px;
+}
+
+.filter-form label {
+   font-size: 14px;
+   font-weight: 500;
+   color: #555;
+}
+
+.filter-form select {
+   padding: 10px 15px;
+   font-size: 14px;
+   border-radius: 6px;
+   border: 1px solid #ddd;
+   background-color: #f9f9f9;
+   width: 200px;
+   transition: all 0.3s ease;
+}
+
+.filter-form select:hover,
+.filter-form select:focus {
+   border-color: #3498db;
+   background-color: #fff;
+   outline: none;
+}
+
+.filter-form button {
+   padding: 12px 18px;
+   font-size: 14px;
+   background-color: #3498db;
+   color: white;
+   border: none;
+   border-radius: 6px;
+   cursor: pointer;
+   transition: all 0.3s ease;
+}
+
+.filter-form button:hover {
+   background-color: #2980b9;
+}
+
+/* Table Styling */
 .bill-table {
    width: 100%;
    border-collapse: collapse;
-   margin-top: 20px;
-   font-family: 'Arial', sans-serif;
-   font-size: 14px;
+   font-size: 15px;
 }
 
 .bill-table th, .bill-table td {
-   padding: 12px 15px;
-   border: 1px solid #ddd;
+   padding: 15px 20px;
+   border: 1px solid #e0e0e0;
    text-align: center;
+   vertical-align: middle;
    font-size: 14px;
 }
 
 .bill-table th {
-   background-color: #333;
-   color: #f9f9f9;
+   background-color: #34495e;
+   color: #ffffff;
    font-size: 16px;
-   font-weight: bold;
+   font-weight: 600;
    text-transform: uppercase;
-   position: sticky;
-   top: 0;
-   z-index: 1;
-   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Adds a shadow to separate the header from the content */
 }
 
 .bill-table tr:nth-child(even) {
@@ -1211,12 +1431,15 @@ section{
 
 .bill-table .status {
    padding: 6px 12px;
-   border-radius: 5px;
-   font-weight: bold;
+   border-radius: 6px;
+   font-weight: 600;
    text-transform: capitalize;
    display: inline-block;
+   min-width: 80px;
+   text-align: center;
 }
 
+/* Status Color Coding */
 .bill-table .status.pending {
    background-color: #f39c12;
    color: white;
@@ -1234,15 +1457,19 @@ section{
 
 /* Buttons Styling */
 .btn {
-   padding: 10px 15px;
+   padding: 12px 20px;
    font-size: 14px;
    cursor: pointer;
-   border-radius: 5px;
+   border-radius: 6px;
    border: none;
    margin: 5px;
    transition: all 0.3s ease;
    display: inline-block;
    text-align: center;
+}
+
+.btn i {
+   font-size: 16px; /* Adjust icon size */
 }
 
 .btn-success {
@@ -1266,51 +1493,49 @@ section{
 .no-action {
    color: #7f8c8d;
    font-style: italic;
-}
-
-/* Filter form styling */
-.status-filter, .tenant-filter {
-   margin-bottom: 20px;
    font-size: 14px;
-   display: flex;
-   align-items: center;
-}
-
-.status-filter label, .tenant-filter label {
-   margin-right: 10px;
-   font-weight: bold;
-   color: #333;
-}
-
-.status-filter select, .tenant-filter select {
-   padding: 8px 12px;
-   font-size: 14px;
-   border-radius: 5px;
-   border: 1px solid #ddd;
-   max-width: 250px;
-}
-
-.tenant-filter select {
-   width: 250px;
-}
-
-.status-filter select {
-   width: 150px;
 }
 
 /* Table Wrapper Styling */
 .bill-table-wrapper {
-   max-height: 600px; /* Increased height for the wrapper */
-   overflow-y: auto; /* Enable vertical scrolling */
-   border: 1px solid #ddd;
-   border-radius: 5px;
+   max-height: 600px; 
+   overflow-y: auto; 
+   border-radius: 6px;
    background-color: #fff;
+   border: 1px solid #ddd;
+   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
-/* Wrapper for the table to control the max-height */
-.table {
-   max-width: 100%;
-   margin: 0 auto;
-   padding: 20px;
+
+/* Add New Bill Button */
+.btn-primary {
+   width: 50px;
+   height: 50px;
+   font-size: 14px;
+   background-color: #3498db;
+   color: white;
+   border: none;
+   border-radius: 6px;
+   cursor: pointer;
+   transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+   background-color: #2980b9;
+}
+
+@media (max-width: 768px) {
+   .filter-form {
+      flex-direction: column;
+      align-items: flex-start;
+   }
+
+   .filter-form select {
+      width: 100%;
+   }
+
+   .btn-primary {
+      width: 100%;
+   }
 }
 
 /* For the Add Bill Form */

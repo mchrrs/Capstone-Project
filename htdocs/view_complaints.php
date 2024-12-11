@@ -50,9 +50,9 @@ $complaints_query->execute([$user_id]);
                         </tr>
                     </thead>
                     <tbody>
-                        <?php 
+                        <?php
                         $count = 1;
-                        while ($complaint = $complaints_query->fetch(PDO::FETCH_ASSOC)): 
+                        while ($complaint = $complaints_query->fetch(PDO::FETCH_ASSOC)):
                         ?>
                             <tr>
                                 <td><?= $count++; ?></td>
@@ -74,7 +74,9 @@ $complaints_query->execute([$user_id]);
             <p class="empty">You have not submitted any complaints yet!</p>
         <?php endif; ?>
     </section>
+    <br><br><br><br><br><br><br><br><br>
 
+    <?php include 'components/footer.php'; ?>
     <!-- custom js file link -->
     <script src="../project/js/script.js"></script>
 </body>

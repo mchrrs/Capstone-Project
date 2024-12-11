@@ -53,7 +53,7 @@
 
         <!-- Footer Bottom Section -->
         <div class="mt-12 border-t border-gray-600 pt-6 text-center text-sm">
-            <p>&copy; <?= date('Y'); ?> Capstone Project 2 | All Rights Reserved | Designed by Your Name</p>
+            <p>&copy; <?= date('Y'); ?> Capstone Project 2 | All Rights Reserved | Designed by Apartment Managment Systems</p>
         </div>
         
     </div>

@@ -89,17 +89,22 @@ $select_properties->execute([$user_id]);
         }
 
         .contract-details .btn {
-            padding: 20px 30px; /* Increased padding for larger button */
+            padding: 20px 30px;
+            /* Increased padding for larger button */
             background-color: #008c8c;
             color: white;
             border: none;
-            border-radius: 8px; /* Rounded corners for smooth look */
+            border-radius: 8px;
+            /* Rounded corners for smooth look */
             cursor: pointer;
             text-decoration: none;
-            font-size: 1.4rem; /* Larger font size */
-            font-weight: bold; /* Make text bold */
+            font-size: 1.4rem;
+            /* Larger font size */
+            font-weight: bold;
+            /* Make text bold */
             transition: background-color 0.3s ease, transform 0.2s ease;
-            display: inline-block; /* Ensure button behaves as a block element */
+            display: inline-block;
+            /* Ensure button behaves as a block element */
             text-align: center;
         }
 
@@ -110,15 +115,19 @@ $select_properties->execute([$user_id]);
 
         /* Actions */
         .actions .btn {
-            padding: 20px 30px; /* Increased padding for larger button */
+            padding: 20px 30px;
+            /* Increased padding for larger button */
             background-color: #4CAF50;
             color: white;
             border: none;
-            border-radius: 8px; /* Rounded corners */
+            border-radius: 8px;
+            /* Rounded corners */
             cursor: pointer;
             text-decoration: none;
-            font-size: 1.4rem; /* Increased font size */
-            font-weight: bold; /* Bold text */
+            font-size: 1.4rem;
+            /* Increased font size */
+            font-weight: bold;
+            /* Bold text */
             transition: background-color 0.3s ease, transform 0.2s ease;
         }
 
@@ -264,9 +273,9 @@ $select_properties->execute([$user_id]);
             const iframe = document.getElementById('popup-iframe');
 
             // Prepend base directory if required
-            const fullPath = filePath.startsWith('/') || filePath.startsWith('http') ? 
-                filePath : 
-                `/project/${filePath}`;
+            const fullPath = filePath.startsWith('/') || filePath.startsWith('http') ?
+                filePath :
+                `/htdocs/${filePath}`;
 
             // Handle file preview
             const ext = fullPath.split('.').pop().toLowerCase();
@@ -298,6 +307,9 @@ $select_properties->execute([$user_id]);
     </script>
 
     <?php include 'components/message.php'; ?>
+    <br><br><br><br><br><br><br><br><br>
+
+    <?php include 'components/footer.php'; ?>
 
 </body>
 

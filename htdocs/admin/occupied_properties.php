@@ -148,7 +148,7 @@ $select_properties->execute();
                                     <?php if (!empty($property['contract'])): ?>
                                         <button
                                             class="btn preview-btn"
-                                            onclick="previewContract('<?= htmlspecialchars('../admin/uploaded_contracts/' . $property['contract']); ?>')">
+                                            onclick="previewContract('<?= htmlspecialchars('admin/uploaded_contracts/' . $property['contract']); ?>')">
                                             Preview Contract
                                         </button>
                                     <?php else: ?>
@@ -191,7 +191,7 @@ $select_properties->execute();
             // Prepend base directory if required
             const fullPath = filePath.startsWith('/') || filePath.startsWith('http') ?
                 filePath :
-                `/project/${filePath}`;
+                `/htdocs/${filePath}`;
 
             // Handle file preview
             const ext = fullPath.split('.').pop().toLowerCase();
