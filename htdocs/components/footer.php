@@ -1,61 +1,87 @@
 <!-- Footer Section Starts -->
-<footer class="bg-gray-800 text-white py-12">
-    <div class="max-w-screen-xl mx-auto px-6 md:px-12">
 
-        <!-- Footer Content -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12">
+<footer class="footer">
 
-            <!-- Contact Information -->
-            <div class="space-y-6">
-                <h3 class="text-3xl font-semibold text-teal-400">Contact Us</h3>
-                <p class="text-lg">Get in touch with us for any queries or support. We’re here to help you.</p>
-                <div class="flex flex-col space-y-3">
-                    <a href="tel:+639453448459" class="flex items-center text-lg hover:text-teal-400">
-                        <i class="fas fa-phone-alt mr-3"></i><span>+63 916 882 5525</span>
-                    </a>
-                    <a href="mailto:apartment.management@gmail.com" class="flex items-center text-lg hover:text-teal-400">
-                        <i class="fas fa-envelope mr-3"></i><span>apartment.management@gmail.com</span>
-                    </a>
-                    <a href="https://www.google.com/maps?q=1463+J.+Ramos,+Pasig,+1638+Metro+Manila" target="_blank" class="flex items-center text-lg hover:text-teal-400">
-                        <i class="fas fa-map-marker-alt mr-3"></i><span>1463 J Ramos St. Ibayo - Tipas</span>
-                    </a>
-                </div>
-            </div>
+   <section class="container">
 
-            <!-- Services / Information -->
-            <div class="space-y-6">
-                <h3 class="text-3xl font-semibold text-teal-400">Quick Links</h3>
-                <ul class="space-y-3">
-                    <li><a href="#" class="text-lg hover:text-teal-400">About Us</a></li>
-                    <li><a href="/project/index.php" class="text-lg hover:text-teal-400">Pay Rent</a></li>
-                    <li><a href="/project/occupied_properties.php" class="text-lg hover:text-teal-400">Your Properties</a></li>
-                    <li><a href="#" class="text-lg hover:text-teal-400">Terms & Conditions</a></li>
-                </ul>
-            </div>
+      <div class="footer-grid">
 
-            <!-- Social Media Links -->
-            <div class="space-y-6">
-                <h3 class="text-3xl font-semibold text-teal-400">Follow Us</h3>
-                <div class="flex space-x-6">
-                    <a href="https://www.facebook.com/LanceBuhat7" target="_blank" class="text-2xl text-white hover:text-teal-400">
-                        <i class="fab fa-facebook-f"></i>
-                    </a>
-                    <a href="#" class="text-2xl text-white hover:text-teal-400">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                    <a href="#" class="text-2xl text-white hover:text-teal-400">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                </div>
-            </div>
+         <!-- Contact Information -->
+         <div class="footer-column">
+            <h3>Contact Us</h3>
+            <br>
+            <ul>
+               <li><a href="tel:1112223333" aria-label="Call us at 1112223333">
+                     <i class="fas fa-phone"></i>
+                     <span>09168825525
+                     </span>
+                  </a></li>
+               <li><a href="mailto:shaikhanas@gmail.com" aria-label="Email us at shaikhanas@gmail.com">
+                     <i class="fas fa-envelope"></i>
+                     <span>capstoneproject@ams.com</span>
+                  </a></li>
+               <li>
+                  <a href="https://www.google.com/maps?q=1463+J.+Ramos,+Pasig,+1638+Metro+Manila"
+                     target="_blank"
+                     rel="noopener noreferrer"
+                     aria-label="Location on Google Maps">
+                     <i class="fas fa-map-marker-alt"></i>
+                     <span>1463 J. Ramos, Pasig, 1638 Metro Manila</span>
+                  </a>
+               </li>
+            </ul>
+         </div>
+         <!-- Quick Links -->
+         <div class="footer-column">
+            <h3>Quick Links</h3>
+            <br>
+            <ul>
+               <li><a href="dashboard.php" aria-label="Navigate to Home">
+                     <i class="fas fa-home"></i>
+                     <span>Home</span>
+                  </a></li>
+               <li><a href="users_messaging.php" aria-label="Navigate to Messaging">
+                     <i class="fas fa-info-circle"></i>
+                     <span>Message</span>
+                  </a></li>
+               <li><a href="complaints.php" aria-label="Navigate to complaints">
+                     <i class="fas fa-address-book"></i>
+                     <span>Contact</span>
+                  </a></li>
+            </ul>
+         </div>
 
-        </div>
+         <!-- Social Media Links -->
+         <div class="footer-column">
+            <h3>Follow Us</h3>
+            <br>
+            <ul>
+               <li><a href="#" aria-label="Follow us on Facebook">
+                     <i class="fab fa-facebook-f"></i>
+                     <span>Facebook</span>
+                  </a></li>
+               <li><a href="#" aria-label="Follow us on Twitter">
+                     <i class="fab fa-twitter"></i>
+                     <span>Twitter</span>
+                  </a></li>
+               <li><a href="#" aria-label="Follow us on Instagram">
+                     <i class="fab fa-instagram"></i>
+                     <span>Instagram</span>
+                  </a></li>
+            </ul>
+         </div>
 
-        <!-- Footer Bottom Section -->
-        <div class="mt-12 border-t border-gray-600 pt-6 text-center text-sm">
-            <p>&copy; <?= date('Y'); ?> Capstone Project 2 | All Rights Reserved | Designed by Apartment Managment Systems</p>
-        </div>
-        
-    </div>
+      </div>
+
+   </section>
+
+   <!-- Footer Credit -->
+   <div class="footer-credit">
+      <p>&copy; <script>
+            document.write(new Date().getFullYear());
+         </script> <span>Capstone Project</span>. All rights reserved.</p>
+   </div>
+
 </footer>
+
 <!-- Footer Section Ends -->

@@ -64,7 +64,7 @@ if (isset($_POST['delete'])) {
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Property Details</title>
+   <title>Room Details</title>
 
    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
 
@@ -84,7 +84,7 @@ if (isset($_POST['delete'])) {
 
    <section class="view-property">
 
-      <h1 class="heading">Property Details</h1>
+      <h1 class="heading">Room Details</h1>
 
       <?php
       $select_properties = $conn->prepare("SELECT * FROM `property` WHERE id = ? ORDER BY date DESC LIMIT 1");
@@ -127,12 +127,13 @@ if (isset($_POST['delete'])) {
                   <p><i class="fas fa-house"></i><span><?= $fetch_property['offer']; ?></span></p>
                   <p><i class="fas fa-calendar"></i><span><?= $fetch_property['date']; ?></span></p>
                </div>
-
                <h3 class="title">Description</h3>
                <p class="description"><?= $fetch_property['description']; ?></p>
                <h3 class="title">Details</h3>
                <div class="flex">
                   <div class="box">
+                     <p><i class="">Occupied By: </i><?= htmlspecialchars($fetch_property['occupied_by']); ?>
+                     <p><i class="">Occupants: </i><?= htmlspecialchars($fetch_property['occupants']); ?></p>
                      <p><i>Bedrooms :</i><span><?= $fetch_property['bedroom']; ?></span></p>
                      <p><i>Bathrooms :</i><span><?= $fetch_property['bathroom']; ?></span></p>
                      <p><i>Carpet Area :</i><span><?= $fetch_property['carpet']; ?>sqft</span></p>
@@ -144,9 +145,9 @@ if (isset($_POST['delete'])) {
                      <p><i>Room floor :</i><span><?= $fetch_property['room_floor']; ?></span></p>
                      <p><i>Furnished :</i><span><?= $fetch_property['furnished']; ?></span></p>
                   </div>
-                  
+
                </div>
-               
+
                <form action="" method="post" class="flex-btn">
                   <input type="hidden" name="delete_id" value="<?= $property_id; ?>">
                   <input type="submit" value="delete property" name="delete" class="delete-btn" onclick="return confirm('delete this listing?');">

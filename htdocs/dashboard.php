@@ -23,77 +23,7 @@ if (isset($_COOKIE['user_id'])) {
 
    <!-- Custom CSS File Link -->
    <link rel="stylesheet" href="css/style.css">
-   <style>
-      /* Basic Layout Styles */
-      body {
-         font-family: 'Arial', sans-serif;
-         margin: 0;
-         padding: 0;
-         background-color: #f5f5f5;
-      }
-
-      .dashboard {
-         width: 90%;
-         max-width: 1200px;
-         margin: 20px auto;
-         padding: 20px;
-         background-color: #fff;
-         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-         border-radius: 8px;
-      }
-
-      .heading {
-         text-align: center;
-         margin-bottom: 30px;
-         color: #333;
-         font-size: 24px;
-      }
-
-      .box-container {
-         display: grid;
-         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-         gap: 20px;
-      }
-
-      .box {
-         background-color: #e0f7fa;
-         padding: 20px;
-         border-radius: 8px;
-         text-align: center;
-         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-         transition: transform 0.3s ease;
-      }
-
-      .box:hover {
-         transform: translateY(-5px);
-      }
-
-      .box h3 {
-         font-size: 36px;
-         color: #00796b;
-         margin-bottom: 10px;
-      }
-
-      .box p {
-         font-size: 18px;
-         color: #555;
-         margin-bottom: 15px;
-      }
-
-      .btn {
-         background-color: #004d40;
-         color: white;
-         padding: 10px 20px;
-         border-radius: 5px;
-         text-decoration: none;
-         font-size: 16px;
-         transition: background-color 0.3s ease;
-      }
-
-      .btn:hover {
-         background-color: rgb(218, 44, 50);
-      }
-   </style>
+   
 </head>
 
 <body>
@@ -102,6 +32,7 @@ if (isset($_COOKIE['user_id'])) {
    <br><br><br><br><br>
    <section class="dashboard">
       <h1 class="heading">Welcome to Your Dashboard</h1>
+      <br><br>
 
       <div class="box-container">
          <!-- Profile Box -->
@@ -137,7 +68,7 @@ if (isset($_COOKIE['user_id'])) {
             ?>
             <h3><?= $total_owned; ?></h3>
             <p>Owned Properties</p>
-            <a href="occupied_properties.php" class="btn">Access Your Units</a>
+            <a href="occupied_properties.php" class="btn">Access Your Room</a>
          </div>
 
          <!-- Tickets Box -->

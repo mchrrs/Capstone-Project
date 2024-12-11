@@ -62,6 +62,9 @@ CREATE TABLE `property` (
     `image_04` VARCHAR(255),
     `image_05` VARCHAR(255),
     `description` TEXT,
+    `occupied_by` VARCHAR(20) NULL,
+    `occupants` INT NULL,
+    `contract` VARCHAR(255) NULL;
     `date` DATETIME DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 

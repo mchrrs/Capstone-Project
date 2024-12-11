@@ -37,7 +37,7 @@ $select_properties->execute();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Occupied Properties</title>
+    <title>Occupied Rooms</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <link rel="stylesheet" href="../css/admin_style.css">
     <style>
@@ -113,7 +113,7 @@ $select_properties->execute();
     <?php include '../components/admin_header.php'; ?>
 
     <section class="occupied-properties">
-        <h1 class="heading">Occupied Properties</h1>
+        <h1 class="heading">Occupied Rooms</h1>
 
         <?php if (isset($success_msg)): ?>
             <p class="success"><?= htmlspecialchars($success_msg); ?></p>
@@ -132,8 +132,6 @@ $select_properties->execute();
                             <th>Email</th>
                             <th>Occupants</th>
                             <th>Contract</th>
-                            <th>Status</th>
-                            <th>Actions</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -155,15 +153,7 @@ $select_properties->execute();
                                         <span>No Contract</span>
                                     <?php endif; ?>
                                 </td>
-                                <td><?= htmlspecialchars($property['status']); ?></td>
-                                <td>
-                                    <form action="" method="POST" style="display:inline;">
-                                        <input type="hidden" name="property_id" value="<?= htmlspecialchars($property['id']); ?>">
-                                        <button type="submit" name="delete_property" class="btn delete-btn" onclick="return confirm('Are you sure you want to delete this property?');">
-                                            Delete
-                                        </button>
-                                    </form>
-                                </td>
+                                
                             </tr>
                         <?php endwhile; ?>
                     </tbody>
@@ -191,7 +181,7 @@ $select_properties->execute();
             // Prepend base directory if required
             const fullPath = filePath.startsWith('/') || filePath.startsWith('http') ?
                 filePath :
-                `/htdocs/${filePath}`;
+                `/${filePath}`;
 
             // Handle file preview
             const ext = fullPath.split('.').pop().toLowerCase();

@@ -203,6 +203,7 @@ $select_properties->execute([$user_id]);
     <?php include 'components/user_header.php'; ?>
 
     <!-- Owned properties section -->
+    <br><br>><br><br>><br><br>
     <section class="occupied-properties">
         <h1 class="heading">Your Owned Properties</h1>
 
@@ -232,7 +233,7 @@ $select_properties->execute([$user_id]);
                                 <p>
                                     <button
                                         class="btn"
-                                        onclick="previewContract('<?= htmlspecialchars('/admin/uploaded_contracts/' . $fetch_property['contract']); ?>')">
+                                        onclick="previewContract('<?= htmlspecialchars('admin/uploaded_contracts/' . $fetch_property['contract']); ?>')">
                                         Preview Contract
                                     </button>
                                 </p>
@@ -275,7 +276,7 @@ $select_properties->execute([$user_id]);
             // Prepend base directory if required
             const fullPath = filePath.startsWith('/') || filePath.startsWith('http') ?
                 filePath :
-                `/htdocs/${filePath}`;
+                `/${filePath}`;
 
             // Handle file preview
             const ext = fullPath.split('.').pop().toLowerCase();

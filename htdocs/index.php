@@ -55,6 +55,7 @@ if (isset($_POST['submit'])) {
 
 <section class="form-container">
     <form action="" method="POST">
+        <h1 class="heading">Pagkalinawan Residence</h1>
         <h3>Welcome back!</h3>
         <input type="email" name="email" required maxlength="50" placeholder="Enter your email" class="box">
         <input type="password" name="pass" required maxlength="20" placeholder="Enter your password" class="box">
@@ -63,7 +64,7 @@ if (isset($_POST['submit'])) {
 </section>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br>
 <br>
 
 <br>

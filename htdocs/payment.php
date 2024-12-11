@@ -150,7 +150,13 @@ $clientSecret = "EOagmsGh-9pnCvSPJ2pi1ONqUdLPr4oEfIOY26W6p_MsiVJ8rQ7ZZ74UQXePj4z
 
         <a href="my_bills.php" class="btn btn-primary btn-validate">Go Back</a>
     </section>
-    <br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br>
+    <section class="box-container">
+        <div>
+            <h1 class="heading">Other Payment Methods</h1>
+            <img src="images/gcash.png" alt="payment-method" style="width: 500px; height: 300px">
+        </div>
+    </section>
 
     <?php include 'components/footer.php'; ?>
 

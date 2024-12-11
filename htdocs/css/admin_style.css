@@ -773,6 +773,13 @@ section{
    color: var(--red);
 }
 
+.listings .box-container .box .status{
+   color: var(--light-color);
+   font-size: 1.7rem;
+   padding: .5rem 0;
+   text-overflow: ellipsis;
+}
+
 .view-property .details{
    background-color: var(--white);
    box-shadow: var(--box-shadow);

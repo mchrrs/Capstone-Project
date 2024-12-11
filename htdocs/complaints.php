@@ -41,7 +41,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 <body>
 <?php include 'components/user_header.php'; ?>
-
+<br> <br> <br> <br> 
 <section class="complaint-details">
     <h1>Submit an Issue</h1>
     
@@ -79,7 +79,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <button type="submit">Submit Complaint</button>
     </form>
 </section>
-
+<br> <br> <br> <br> 
+<?php include 'components/footer.php';?>
 </body>
 
 </html>

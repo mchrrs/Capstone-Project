@@ -1,5 +1,4 @@
 <?php
-
 include '../components/connect.php';
 
 if (isset($_COOKIE['admin_id'])) {
@@ -77,23 +76,47 @@ if (isset($_POST['delete'])) {
 
       <h1 class="heading">All Units</h1>
 
+      <!-- Filter form for status -->
       <form action="" method="POST" class="search-form">
          <input type="text" name="search_box" placeholder="search listings..." maxlength="100" required>
          <button type="submit" class="fas fa-search" name="search_btn"></button>
+         <!-- Dropdown for filtering by status -->
+         <select name="status_filter" class="status-filter" onchange="this.form.submit()">
+            <option value="">Filter by Status</option>
+            <option value="Available" <?= (isset($_POST['status_filter']) && $_POST['status_filter'] == 'Available') ? 'selected' : ''; ?>>Available</option>
+            <option value="Occupied" <?= (isset($_POST['status_filter']) && $_POST['status_filter'] == 'Occupied') ? 'selected' : ''; ?>>Occupied</option>
+         </select>
       </form>
+      <br> <br>
 
       <div class="box-container">
 
          <?php
+         // Check if we are filtering by status
+         $status_filter = isset($_POST['status_filter']) ? $_POST['status_filter'] : '';
+
          if (isset($_POST['search_box']) or isset($_POST['search_btn'])) {
             $search_box = $_POST['search_box'];
             $search_box = filter_var($search_box, FILTER_SANITIZE_STRING);
-            $select_listings = $conn->prepare("SELECT * FROM `property` WHERE property_name LIKE '%{$search_box}%' OR address LIKE '%{$search_box}%' ORDER BY date DESC");
-            $select_listings->execute();
+            // Apply the status filter if provided
+            if ($status_filter != '') {
+               $select_listings = $conn->prepare("SELECT * FROM `property` WHERE (property_name LIKE '%{$search_box}%' OR address LIKE '%{$search_box}%') AND status = ? ORDER BY date DESC");
+               $select_listings->execute([$status_filter]);
+            } else {
+               $select_listings = $conn->prepare("SELECT * FROM `property` WHERE property_name LIKE '%{$search_box}%' OR address LIKE '%{$search_box}%' ORDER BY date DESC");
+               $select_listings->execute();
+            }
          } else {
-            $select_listings = $conn->prepare("SELECT * FROM `property` ORDER BY date DESC");
-            $select_listings->execute();
+            // Apply the status filter if provided
+            if ($status_filter != '') {
+               $select_listings = $conn->prepare("SELECT * FROM `property` WHERE status = ? ORDER BY date DESC");
+               $select_listings->execute([$status_filter]);
+            } else {
+               $select_listings = $conn->prepare("SELECT * FROM `property` ORDER BY date DESC");
+               $select_listings->execute();
+            }
          }
+
          $total_images = 0;
          if ($select_listings->rowCount() > 0) {
             while ($fetch_listing = $select_listings->fetch(PDO::FETCH_ASSOC)) {
@@ -135,11 +158,13 @@ if (isset($_POST['delete'])) {
                   <p class="price"><i class="fa-solid fa-peso-sign"></i><?= $fetch_listing['price']; ?></p>
                   <h3 class="name"><?= $fetch_listing['property_name']; ?></h3>
                   <p class="location"><i class="fas fa-map-marker-alt"></i><?= $fetch_listing['address']; ?></p>
+                  <p class="status <?= strtolower($fetch_listing['status']); ?>"><strong>Status:</strong> <?= $fetch_listing['status']; ?></p>
+
                   <form action="" method="POST">
                      <input type="hidden" name="delete_id" value="<?= $listing_id; ?>">
-                     <a href="view_property.php?get_id=<?= $listing_id; ?>" class="btn">view property</a>
-                     <a href="set_property.php?get_id=<?= $listing_id; ?>" class="btn">Set Property</a>
-                     <input type="submit" value="delete listing" onclick="return confirm('delete this listing?');" name="delete" class="delete-btn">
+                     <a href="view_property.php?get_id=<?= $listing_id; ?>" class="btn">Room Details</a>
+                     <a href="set_property.php?get_id=<?= $listing_id; ?>" class="btn">Update Room</a>
+                     <input type="submit" value="Delete Room" onclick="return confirm('delete this listing?');" name="delete" class="delete-btn">
                   </form>
                </div>
          <?php
@@ -154,24 +179,6 @@ if (isset($_POST['delete'])) {
       </div>
 
    </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
 

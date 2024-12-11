@@ -2,13 +2,13 @@
 
    <div id="close-btn"><i class="fas fa-times"></i></div>
 
-   <a href="dashboard.php" class="logo">AdminPanel</a>
+   <a href="dashboard.php" class="logo">Pagkalinawan AMS</a>
 
    <nav class="navbar">
       <a href="dashboard.php"><i class="fas fa-home"></i><span>Home</span></a>
-      <a href="listings.php"><i class="fas fa-building"></i><span>Units</span></a>
-      <a href="occupied_properties.php"><i class="fas fa-home"></i><span>Occupied Units</span></a>
-      <a href="post_property.php"><i class="fas fa-building"></i><span>Add Unit</span></a>
+      <a href="listings.php"><i class="fas fa-building"></i><span>All Rooms</span></a>
+      <a href="occupied_properties.php"><i class="fas fa-home"></i><span>Occupied Rooms</span></a>
+      <a href="post_property.php"><i class="fas fa-building"></i><span>Add Room</span></a>
       <a href="users.php"><i class="fas fa-user"></i><span>Users</span></a>
       <a href="admins.php"><i class="fas fa-user-gear"></i><span>Admins</span></a>
       <a href="admin_messaging.php"><i class="fas fa-message"></i><span>Messages</span></a>
